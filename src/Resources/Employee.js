@@ -3,6 +3,7 @@ import axios from "axios"
 import * as ReactBootStrap from 'react-bootstrap';
 
 
+
 function Employee(props){
     const  [newCrew, setNewCrew] = useState(null);
     
@@ -17,8 +18,10 @@ function Employee(props){
     [props.selectedEmployee]
     );
     if(!newCrew) {
-        return <p>Loading...</p>;
-    }
+      
+      return <p>Loading...</p>;
+      
+  }
     
     return <div class="card text-center">   
           <ReactBootStrap.Card style={{ width: '18rem' }} >

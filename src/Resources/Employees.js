@@ -28,13 +28,12 @@ const Employees = () => {
       }, [setPosts]);
 
         if(selectedEmployee) {
-            return (
-                <div>
-                <Employee selectedEmployee={selectedEmployee} />
-            
-                
-                </div>
-            )
+          return (
+            <div>
+            <Employee selectedEmployee={selectedEmployee} />
+            <button className="text-center btn btn-danger"onClick={() => setSelectedEmployee(null)}>Back To Main Menu</button>
+            </div>
+        );
         }
 
       return (
@@ -56,7 +55,7 @@ const Employees = () => {
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.department}</td>
-                 <td><button onClick = { () =>setSelectedEmployee(item.id) }>Employee Info</button></td>
+                <td><button className="btn btn-info" onClick = { () =>setSelectedEmployee(item.id) }>Employee Info</button></td>
                  
                 
             </tr>
